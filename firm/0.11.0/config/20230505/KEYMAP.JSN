@@ -6,8 +6,8 @@
 "KC_TAB",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",      "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "JP_AT",
 "KC_LCTL", "KC_A",    "KC_S",    "KC_D",    "KC_F",    "KC_G",      "KC_H",    "KC_J",    "KC_K",    "KC_L",    "JP_SCLN", "JP_COLN",
 "KC_LSFT", "KC_Z",    "KC_X",    "KC_C",    "KC_V",    "KC_B",      "KC_N",    "KC_M",    "JP_COMM", "JP_DOT",  "JP_SLSH", "JP_UNDS",
-"LALT_T(KC_ESC)", "LGUI_T(KC_DEL)", "LSFT_T(KC_SPC)", "MO(1)", "KC_LANG2",
-"LT(6,KC_LANG1)", "MO(2)", "RSFT_T(KC_SPC)", "RGUI_T(KC_BSPC)", "RALT_T(KC_ENT)"
+"LALT_T(KC_ESC)", "LGUI_T(KC_DEL)", "LSFT_T(KC_SPC)", "MO(1)", "xEISU",
+"LT(6,xKANA)", "MO(2)", "RSFT_T(KC_SPC)", "RGUI_T(KC_BSPC)", "RALT_T(KC_ENT)"
 ],[
 "JP_EXLM", "JP_DQUO", "JP_HASH", "JP_DLR",  "JP_PERC", "JP_AMPR",   "JP_QUOT", "JP_LPRN", "JP_RPRN", "LSFT(JP_0)","JP_EQL",  "JP_TILD",
 "JP_1",    "JP_2",    "JP_3",    "JP_4",    "JP_5",    "JP_6",      "JP_7",    "JP_8",    "JP_9",    "JP_0",      "JP_MINS", "JP_CIRC",
