@@ -35,6 +35,7 @@ tar xjvf keyboards/tk46v4/archive/bmp_add_files.tar.bz2
 4. build firmware
 
 ```
+cd keyboards/tk46v4
 ./build.sh 
 ```
 
