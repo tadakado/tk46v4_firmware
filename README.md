@@ -5,7 +5,9 @@
 BMP firmware for tk46v4 keyboard
 nRF52 BLE + IO Expander + I2C RGB LED controller with WS2812 + Cirque Trackpad
 
-## How to make
+![tk46v4](image/tk46v4.jpg)
+
+## How to make the firmware
 
 1. build environment
 
