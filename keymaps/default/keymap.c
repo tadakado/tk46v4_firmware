@@ -84,6 +84,7 @@ void pointing_device_init_user(void) {
 #define LED_BOTH (LED_LEFT | LED_RIGHT)
 
 static bool led_init_done = false;
+static uint16_t ble_stat;
 
 static uint8_t I2C_LED_START[2] = {0xff, 0x07};
 
@@ -141,18 +142,6 @@ void init_led() {
     i2c_led.addr = 0x00;
 
     set_led_all(LED_BOTH, RGB_RED);
-}
-
-void keyboard_post_init_user(void) {
-    init_led();
-}
-
-void matrix_scan_user(void) {
-    // somehow init_led requires additional code here.
-    if (! led_init_done) {
-        rgblight_set();
-        led_init_done = true;
-    }
 }
 
 #define COLOR0 RGB_RED
@@ -214,6 +203,24 @@ void set_connection_led() {
         default:
             set_led(LED_BOTH, COLOR9, 0); break;
         }
+    }
+}
+
+void keyboard_post_init_user(void) {
+    init_led();
+    ble_stat = BMPAPI->ble.get_connection_status() | (get_ble_enabled()<<15);
+}
+
+void matrix_scan_user(void) {
+    // somehow init_led requires additional code here.
+    if (! led_init_done) {
+        rgblight_set();
+        led_init_done = true;
+    }
+    uint16_t stat = BMPAPI->ble.get_connection_status() | (get_ble_enabled()<<15);;
+    if (stat != ble_stat) {
+        set_connection_led();
+	ble_stat = stat;
     }
 }
 
