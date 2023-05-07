@@ -16,5 +16,5 @@
         "central":{"max_interval":30,"min_interval":30,"slave_latency":0},
         "led":{"pin":1, "num":7},
         "keymap":{"locale":"JP","use_ascii":0},
-        "reserved":[0,0,1,0,0,0,0,0]
+        "reserved":[0,0,0,0,0,0,0,0]
 }}

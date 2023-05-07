@@ -85,7 +85,7 @@ void pointing_device_init_user(void) {
 
 static bool led_init_done = false;
 static uint16_t ble_stat;
-
+static uint32_t led_off_time;
 static uint8_t I2C_LED_START[2] = {0xff, 0x07};
 
 typedef struct {
@@ -138,10 +138,9 @@ void set_led_all(uint8_t side, uint8_t r, uint8_t g, uint8_t b) {
 void init_led() {
     rgblight_enable();
     rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);
-
     i2c_led.addr = 0x00;
-
     set_led_all(LED_BOTH, RGB_RED);
+    led_off_time = timer_read32();
 }
 
 #define COLOR0 RGB_RED
@@ -221,18 +220,19 @@ void matrix_scan_user(void) {
     if (stat != ble_stat) {
         set_connection_led();
 	ble_stat = stat;
+	led_off_time = timer_read32();
+    }
+    if (timer_elapsed32(led_off_time) > 10 * 1000) { // 10 sec
+        set_led_all(LED_BOTH, RGB_BLACK);
     }
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     set_layer_led(state);
     set_connection_led();
+    led_off_time = timer_read32();
     return state;
 }
-
-//void bmp_state_change_cb_user(bmp_api_event_t event) {
-//    set_connection_led();
-//}
 
 void bmp_before_sleep() {
     set_led_all(LED_BOTH, RGB_BLACK);

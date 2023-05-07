@@ -20,7 +20,7 @@
            "KC_ENT",  "KC_DEL",        "KC_SPC",  "MO(3)",   "KC_TRNS",   "KC_TRNS", "KC_TRNS", "KC_SPC",  "KC_BSPC", "KC_TRNS"
 ],[
 "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",     "KC_F7",   "KC_F8",   "KC_F9",   "KC_F1O",  "KC_F11",  "KC_F12",
-"TG(5)",   "CLR",     "STAT",    "ENT_SLP", "RESET",   "KC_NO",     "KC_MUTE", "KC_VOLD", "KC_VOLU", "KC_NO",   "KC_NO",   "KC_NO",
+"TG(5)",   "CLR",     "STAT",    "ENT_SLP", "RESET",   "LEDOFF",    "KC_MUTE", "KC_VOLD", "KC_VOLU", "KC_NO",   "KC_NO",   "KC_NO",
 "TG(4)",   "KC_NO",   "ADV_ID0", "ADV_ID1", "ADV_ID2", "ADV_ID3",   "SEL_USB", "SEL_BLE", "BLE_EN",  "BLE_DIS", "KC_NO",   "KC_NO",
            "ENT_DFU", "KC_NO",   "KC_NO",   "KC_TRNS", "KC_TRNS",   "KC_TRNS", "KC_TRNS", "KC_NO",   "KC_NO",   "KC_NO"
 ],[
