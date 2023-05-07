@@ -88,12 +88,10 @@ static uint16_t ble_stat;
 static uint32_t led_off_time;
 static uint8_t I2C_LED_START[2] = {0xff, 0x07};
 
-typedef struct {
+struct {
     uint8_t addr;
     RGB data[N_LED];
-} I2C_LED;
-
-static I2C_LED i2c_led;
+} static i2c_led = { 0x00 };
 
 void i2c_set_led() {
     i2c_init();
@@ -138,7 +136,6 @@ void set_led_all(uint8_t side, uint8_t r, uint8_t g, uint8_t b) {
 void init_led() {
     rgblight_enable();
     rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);
-    i2c_led.addr = 0x00;
     set_led_all(LED_BOTH, RGB_RED);
     led_off_time = timer_read32();
 }
