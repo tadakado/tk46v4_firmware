@@ -1,0 +1,64 @@
+[DEFAULT] (red)
+ TAB  q   w   e   r   t           y   u   i   o   p   @
+ CTL  a   s   d   f   g           h   j   k   l   ;   :
+ SFT  z   x   c   v   b           n   m   ,   .   /   _
+         ALT GUI SFT LOW MUH HEN RIS SFT GUI ALT
+         ESC DEL SPC            {MUS}SPC BSP ENT
+
+[SHIFT]
+ ---  Q   W   E   R   T           Y   U   I   O   P   `
+ ---  A   S   D   F   G           H   J   K   L   +   *
+ ---  Z   X   C   V   B           N   M   <   >   ?   _
+
+[LOWER] (green)
+  !   "   #   $   %   &           '   (   )       =   ~
+  1   2   3   4   5   6           7   8   9   0   -   ^
+ --- Z/H TAB --- --- ---          \   |   [   ]   {   }
+         ENT DEL SPC --- --- --- --- SPC BSP ---
+
+[RAISE] (blue)
+ --- --- --- --- --- ---         --- --- --- --- --- ---
+ --- --- CAP HOM END INS         <<< vvv ^^^ >>> P^^ ---
+ --- --- --- --- --- ---         --- --- --- --- Pvv ---
+         ENT DEL SPC --- --- --- --- SPC BSP ---
+
+[ADJUST] (yellow)
+ F1  F2  F3  F4  F5  F6          F7  F8  F9  F1O F11 F12
+(BLE)CLR STA SLP RST ___         MUT Vvv V^^ ___ ___ ___
+(NUM)___ BL0 BL1 BL2 BL3         USB BLE BEN BDI ___ ___
+         DFU ___ ___ --- --- --- --- ___ ___ ___
+
+[NUM] (magenta)
+  !   "   #   $   %   &           -   7   8   9  BSP  /
+  '   (   )   <   >   `           +   4   5   6  TAB  *
+(NUM) [   ]   {   }   ?           =   1   2   3  ENT  ,
+          ~   ^   \  --- --- --- ---  0   .  SPC
+
+[BLE] (cyan)
+ ___ ___ ___ BDI BEN BLE         USB UEN UDI ___ ___ ___
+(BLE)BL0 BL1 BL2 BL3 BL4         BL5 BL6 BL7 BLA ___ ___
+ ___ BD0 BD1 BD2 BD3 BD4         BD5 BD6 BD7 BDA ___ ___
+         ___ ___ ___ --- --- --- --- ___ ___ ___
+
+[MOUSE] (white)
+ ___ ___ ___ ___ ___ ___         ESC BN3 BN4 BN5 AC2 ___
+ ___ ___ ___ BN1 BN2 ___         BN1 BN2 WHD WHU AC1 ___
+ ___ ___ ___ ___ ___ ___         M<< Mvv M^^ M>> AC0 ___
+         ___ ___ ___ --- --- ---(MUS)___ ___ ___
+
+<かな>
+ ___ た  て  い  す  か          ん  な  に  ら  せ  ゛
+ ___ ち  と  し  は  き          く  ま  の  り  れ  け
+ ___ つ  さ  そ  ひ  こ          み  も  ね  る  め  ろ
+
+<SHIFT>
+ ___ ___ ___ ぃ  ___ ___         ___ ___ ___ ___ ___ ___
+ ___ ___ ___ ___ ___ ___         ___ ___ ___ ___ ___ ___
+ ___ っ  ___ ___ ___ ___         ___ ___ 、  。  ・  ___
+
+<LOWER>
+ ___ ___ ぁ  ぅ  ぇ  ぉ          ゃ  ゅ  ょ  を  ___ ___
+ ぬ  ふ  あ  う  え  お          や  ゆ  よ  わ  ほ  へ
+ ___ ___ ___ ___ ___ ___         ー  ー  ゜  む  「  」
+
+

@@ -78,6 +78,7 @@ void pointing_device_init_user(void) {
 
 #define I2C_LED_ADDR 0x08
 #define N_LED 7
+#define STATUS_LED 6
 
 #define LED_LEFT 1
 #define LED_RIGHT 2
@@ -177,27 +178,27 @@ void set_connection_led() {
     // stat & 0xff : BLE connection id (0 to 7) or nobonding (0xff)
     uint16_t stat = BMPAPI->ble.get_connection_status();
     if (get_usb_enabled()) {
-        set_led(LED_BOTH, COLOR0, 0);
+        set_led(LED_BOTH, COLOR0, STATUS_LED);
     } else {
         switch (stat & 0xff) {
         case 0:
-            set_led(LED_BOTH, COLOR1, 0); break;
+            set_led(LED_BOTH, COLOR1, STATUS_LED); break;
         case 1:
-            set_led(LED_BOTH, COLOR2, 0); break;
+            set_led(LED_BOTH, COLOR2, STATUS_LED); break;
         case 2:
-            set_led(LED_BOTH, COLOR3, 0); break;
+            set_led(LED_BOTH, COLOR3, STATUS_LED); break;
         case 3:
-            set_led(LED_BOTH, COLOR4, 0); break;
+            set_led(LED_BOTH, COLOR4, STATUS_LED); break;
         case 4:
-            set_led(LED_BOTH, COLOR5, 0); break;
+            set_led(LED_BOTH, COLOR5, STATUS_LED); break;
         case 5:
-            set_led(LED_BOTH, COLOR6, 0); break;
+            set_led(LED_BOTH, COLOR6, STATUS_LED); break;
         case 6:
-            set_led(LED_BOTH, COLOR7, 0); break;
+            set_led(LED_BOTH, COLOR7, STATUS_LED); break;
         case 7:
-            set_led(LED_BOTH, COLOR8, 0); break;
+            set_led(LED_BOTH, COLOR8, STATUS_LED); break;
         default:
-            set_led(LED_BOTH, COLOR9, 0); break;
+            set_led(LED_BOTH, COLOR9, STATUS_LED); break;
         }
     }
 }
@@ -241,6 +242,16 @@ void status() {
     uprintf("USB/BLE status: %d %d 0x%04x\r",
             get_usb_enabled(), get_ble_enabled(),
             BMPAPI->ble.get_connection_status());
+}
+
+// Pointing device
+
+report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
+    mouse_report.x = mouse_report.x / 2;
+    mouse_report.y = mouse_report.y / 2;
+//    mouse_report.h = mouse_report.h / 2;
+//    mouse_report.v = mouse_report.v / 2;
+    return mouse_report;
 }
 
 // Custom behavior
