@@ -23,6 +23,7 @@ cd qmk_firmware
 ```
 cd /home/qmk_firmware/keyboards
 git clone https://github.com/tadakado/tk46v4_firmware.git tk46v4
+cd ..
 ```
 
 3. extract files
